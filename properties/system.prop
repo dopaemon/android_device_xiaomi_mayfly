@@ -1,2 +1,3 @@
- Xiaomi
+# Xiaomi
 ro.product.mod_device=mayfly
+ro.miui.notch=1
