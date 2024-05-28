@@ -22,3 +22,6 @@ PRODUCT_MODEL := 2206123SC
 PRODUCT_NAME := lineage_mayfly
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Miui Camera for mayfly
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
