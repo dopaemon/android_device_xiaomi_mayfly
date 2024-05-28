@@ -31,6 +31,9 @@ TARGET_HAS_UDFPS := true
 TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
 RISING_BUILDTYPE := UNOFFICIAL
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_USE_PIXEL_FINGERPRINT := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_MAINTAINER="KernelPanix" \
@@ -43,3 +46,6 @@ PRODUCT_MODEL := 2206123SC
 PRODUCT_NAME := lineage_mayfly
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Miui Camera for mayfly
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
