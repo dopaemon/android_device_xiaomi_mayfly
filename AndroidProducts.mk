@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_mayfly.mk
+    $(LOCAL_DIR)/superior_mayfly.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_mayfly-user \
-    lineage_mayfly-userdebug \
-    lineage_mayfly-eng
+    superior_mayfly-user \
+    superior_mayfly-userdebug \
+    superior_mayfly-eng
