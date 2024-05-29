@@ -14,7 +14,7 @@ else
     git clone -b lineage-21 https://github.com/dopaemon/android_vendor_xiaomi_maycorn-camera.git vendor/xiaomi/maycorn-camera
 fi
 
-if [ -d "vendor/xiaomi/maycorn-camera/common/proprietary/product/priv-app/MiuiCamera/MiuiCamera.apk" ]; then
+if [ -e "vendor/xiaomi/maycorn-camera/common/proprietary/product/priv-app/MiuiCamera/MiuiCamera.apk" ]; then
     echo "vendor/xiaomi/maycorn-camera/common/proprietary/product/priv-app/MiuiCamera/MiuiCamera.apk: done"
 else
     wget -O vendor/xiaomi/maycorn-camera/common/proprietary/product/priv-app/MiuiCamera/MiuiCamera.apk https://github.com/dopaemon/android_vendor_xiaomi_maycorn-camera/releases/download/lineage-21/MiuiCamera.apk
