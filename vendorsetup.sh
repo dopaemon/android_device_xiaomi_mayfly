@@ -74,3 +74,8 @@ else
     wget -O vendor/xiaomi/mayfly/radio/vm-bootsys.img https://sourceforge.net/projects/android-unofficial/files/Android-14/mayfly/vendor/vm-bootsys.img
 fi
 
+if [ -e "packages/resources/devicesettings" ]; then
+    echo "packages/resources/devicesettings: done"
+else
+    git clone -b lineage-21.0 https://github.com/LineageOS/android_packages_resources_devicesettings.git packages/resources/devicesettings
+fi
