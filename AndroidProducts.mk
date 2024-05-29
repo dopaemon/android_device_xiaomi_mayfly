@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_mayfly.mk
+    $(LOCAL_DIR)/voltage_mayfly.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_mayfly-user \
-    lineage_mayfly-userdebug \
-    lineage_mayfly-eng
+    voltage_mayfly-user \
+    voltage_mayfly-userdebug \
+    voltage_mayfly-eng
