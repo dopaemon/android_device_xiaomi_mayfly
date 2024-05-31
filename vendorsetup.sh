@@ -18,6 +18,10 @@ fi
 
 if [ -d "hardware/xiaomi" ]; then
     echo "hardware/xiaomi: done"
+    cd hardware/xiaomi
+    git fetch https://github.com/LineageOS/android_hardware_xiaomi.git lineage-21
+    git reset --hard ab7514301c58a685f9dd8a7dc4395c786d79b54d
+    cd $PWDIR
 else
     git clone -b lineage-21 --single-branch https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
     cd hardware/xiaomi
@@ -110,11 +114,11 @@ changes=(
 repopick -P hardware/xiaomi ${changes[@]}&
 
 # frameworks/base
-changes=(
-386158 # Add 5G Ultra Wideband icon carrier config keys
-386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
-)
-repopick -P frameworks/base ${changes[@]}&
+# changes=(
+# 386158 # Add 5G Ultra Wideband icon carrier config keys
+# 386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
+# )
+# repopick -P frameworks/base ${changes[@]}&
 
 # vendor/lineage
 changes=(
