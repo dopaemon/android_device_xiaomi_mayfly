@@ -18,15 +18,8 @@ fi
 
 if [ -d "hardware/xiaomi" ]; then
     echo "hardware/xiaomi: done"
-    cd hardware/xiaomi
-    git fetch https://github.com/LineageOS/android_hardware_xiaomi.git lineage-21
-    git reset --hard ab7514301c58a685f9dd8a7dc4395c786d79b54d
-    cd $PWDIR
 else
     git clone -b lineage-21 --single-branch https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
-    cd hardware/xiaomi
-    git reset --hard ab7514301c58a685f9dd8a7dc4395c786d79b54d
-    cd $PWDIR
 fi
 
 if [ -d "kernel/xiaomi/sm8450" ]; then
@@ -94,24 +87,24 @@ else
 fi
 
 # hardware/xiaomi
-changes=(
-352657 # Add dummy sensors sub HAL
-352658 # sensors: Make sensor batch function virtual
-352659 # sensors: Make sensor run function virtual
-352660 # sensors: Make sensor flush function virtual
-352661 # sensors: Make sensor set mode operation function virtual
-352662 # sensors: Move one shot sensor out of main class
-352663 # sensors: Fix locking around setOperationMode and activate
-352664 # sensors: Create sysfs polling one shot sensor
-392967 # sensors: Let the reading of poll fd be configurable
-392968 # sensors: Add SysfsPollingOneShotSensor constructor without enable path
-392969 # sensors: Add udfps long press sensor using SysfsPollingOneShotSensor
-352665 # sensors: Handle fod_pressed_state without coordinates
-363160 # hidl: biometrics: fingerprint: Add enroll methods to udfps handler
-392965 # vibrator: effect: Create double click effect from click if necessary
-392966 # vibrator: effect: Fallback to click if an effect is missing
-)
-repopick -P hardware/xiaomi ${changes[@]}&
+# changes=(
+# 352657 # Add dummy sensors sub HAL
+# 352658 # sensors: Make sensor batch function virtual
+# # 352659 # sensors: Make sensor run function virtual
+# # 352660 # sensors: Make sensor flush function virtual
+# 352661 # sensors: Make sensor set mode operation function virtual
+# 352662 # sensors: Move one shot sensor out of main class
+# 352663 # sensors: Fix locking around setOperationMode and activate
+# 352664 # sensors: Create sysfs polling one shot sensor
+# 392967 # sensors: Let the reading of poll fd be configurable
+# 392968 # sensors: Add SysfsPollingOneShotSensor constructor without enable path
+# 392969 # sensors: Add udfps long press sensor using SysfsPollingOneShotSensor
+# 352665 # sensors: Handle fod_pressed_state without coordinates
+# 363160 # hidl: biometrics: fingerprint: Add enroll methods to udfps handler
+# 392965 # vibrator: effect: Create double click effect from click if necessary
+# 392966 # vibrator: effect: Fallback to click if an effect is missing
+# )
+# repopick -P hardware/xiaomi ${changes[@]}&
 
 # frameworks/base
 # changes=(
