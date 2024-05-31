@@ -48,9 +48,6 @@ PRODUCT_NAME := lineage_mayfly
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="mayfly_cn-user 14 UKQ1.231003.002 V816.0.5.0.ULTCNXM release-keys"
+    PRIVATE_BUILD_DESC="mayfly-user 14 UKQ1.231003.002 V816.0.5.0.ULTCNXM release-keys"
 
-BUILD_FINGERPRINT := Xiaomi/mayfly_cn/mayfly:14/UKQ1.231003.002/V816.0.5.0.ULTCNXM:user/release-keys
-
-# Miui Camera for mayfly
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+BUILD_FINGERPRINT := Xiaomi/mayfly/mayfly:14/UKQ1.231003.002/V816.0.5.0.ULTCNXM:user/release-keys
