@@ -10,7 +10,7 @@ DEVICE_PATH := device/xiaomi/mayfly
 include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 
 # Inherit from proprietary files for miuicamera
--include vendor/xiaomi/maycorn-miuicamera/products/board.mk
+include vendor/xiaomi/maycorn-miuicamera/products/board.mk
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop

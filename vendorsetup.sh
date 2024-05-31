@@ -8,16 +8,16 @@ PWDIR=$(pwd)
 #     git clone -b lineage-21 --single-branch https://github.com/dopaemon/android_vendor_xiaomi_miuicamera.git vendor/xiaomi/miuicamera
 # fi
 
-if [ -d "vendor/xiaomi/maycorn-camera" ]; then
-    echo "vendor/xiaomi/maycorn-camera: done"
+if [ -d "vendor/xiaomi/maycorn-miuicamera" ]; then
+    echo "vendor/xiaomi/maycorn-miuicamera: done"
 else
-    git clone -b lineage-21 https://github.com/dopaemon/android_vendor_xiaomi_maycorn-camera.git vendor/xiaomi/maycorn-camera
+    git clone -b lineage-21 https://github.com/dopaemon/android_vendor_xiaomi_maycorn-camera.git vendor/xiaomi/maycorn-miuicamera
 fi
 
-if [ -e "vendor/xiaomi/maycorn-camera/common/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk" ]; then
-    echo "vendor/xiaomi/maycorn-camera/common/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk: done"
+if [ -e "vendor/xiaomi/maycorn-miuicamera/common/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk" ]; then
+    echo "vendor/xiaomi/maycorn-miuicamera/common/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk: done"
 else
-    wget -O vendor/xiaomi/maycorn-camera/common/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk https://github.com/dopaemon/android_vendor_xiaomi_maycorn-camera/releases/download/lineage-21/MiuiCamera.apk
+    wget -O vendor/xiaomi/maycorn-miuicamera/common/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk https://github.com/dopaemon/android_vendor_xiaomi_maycorn-camera/releases/download/lineage-21/MiuiCamera.apk
 fi
 
 if [ -d "hardware/xiaomi" ]; then
