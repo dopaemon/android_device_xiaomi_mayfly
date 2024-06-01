@@ -2,7 +2,7 @@
 
 PWDIR=$(pwd)
 
-source "vendor/lineage/build/envsetup.sh";
+# source "vendor/lineage/build/envsetup.sh";
 
 if [ -d "vendor/xiaomi/miuicamera-mayfly" ]; then
     echo "vendor/xiaomi/miuicamera-mayfly: done"
@@ -114,15 +114,15 @@ fi
 # repopick -P frameworks/base ${changes[@]}&
 
 # vendor/lineage
-changes=(
-367044 # android: merge_dtbs: Respect miboard-id while merging
-)
-repopick -P vendor/lineage ${changes[@]}&
+# changes=(
+# 367044 # android: merge_dtbs: Respect miboard-id while merging
+# )
+# repopick -P vendor/lineage ${changes[@]}&
 
 # vendor/qcom/opensource/vibrator
-changes=(
-392952 # vibrator: Use a better check for primitive effects
-)
-repopick -P vendor/qcom/opensource/vibrator ${changes[@]}&
+# changes=(
+# 392952 # vibrator: Use a better check for primitive effects
+# )
+# repopick -P vendor/qcom/opensource/vibrator ${changes[@]}&
 
-wait
+# wait
