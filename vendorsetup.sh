@@ -26,13 +26,14 @@ if [ -d "kernel/xiaomi/sm8450" ]; then
     echo "kernel/xiaomi/sm8450: done"
 else
     git clone -b lineage-21 --single-branch https://github.com/dopaemon/android_kernel_xiaomi_sm8450.git kernel/xiaomi/sm8450
-    if [ -d "kernel/xiaomi/sm8450/KernelSU" ]; then
-        echo "KernelSU: done"
-    else
-        cd kernel/xiaomi/sm8450
-        rm -rf KernelSU
-        git submodule add -f https://github.com/tiann/KernelSU.git KernelSU
-    fi
+fi
+
+if [ -d "kernel/xiaomi/sm8450/KernelSU" ]; then
+    echo "KernelSU: done"
+else
+    cd kernel/xiaomi/sm8450
+    rm -rf KernelSU
+    git submodule add -f https://github.com/tiann/KernelSU.git KernelSU
     cd $PWDIR
 fi
 
