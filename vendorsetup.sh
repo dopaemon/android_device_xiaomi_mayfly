@@ -19,7 +19,7 @@ fi
 if [ -d "hardware/xiaomi" ]; then
     echo "hardware/xiaomi: done"
 else
-    git clone -b lineage-21 --single-branch https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
+    git clone -b lineage-21 --single-branch https://github.com/dopaemon/android_hardware_xiaomi.git hardware/xiaomi
 fi
 
 if [ -d "kernel/xiaomi/sm8450" ]; then
