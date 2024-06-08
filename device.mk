@@ -7,6 +7,9 @@
 # Inherit from sm8450-common
 $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
 
+# Inherit from MiuiCamera
+$(call inherit-product, device/xiaomi/miuicamera-mayfly/device.mk)
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureResMayfly \
@@ -16,10 +19,6 @@ PRODUCT_PACKAGES += \
     SettingsResMayfly \
     SystemUIResMayfly \
     WifiResMayfly
-
-# Shim for miui camera 
-PRODUCT_PACKAGES += \
-    libgui_shim_miuicamera
 
 # Sensors
 PRODUCT_PACKAGES += \
