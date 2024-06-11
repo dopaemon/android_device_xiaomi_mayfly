@@ -91,7 +91,7 @@ else
     wget -O vendor/xiaomi/miuicamera-mayfly/proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk https://github.com/dopaemon/android_vendor_xiaomi_miuicamera-mayfly/releases/download/lineage-21/MiuiCamera.apk
 fi
 
-fi [ -e "vendor/xiaomi/mayfly/proprietary/vendor/lib64/libxmi_high_dynamic_range_cdsp.so" ]; then
+if [ -e "vendor/xiaomi/mayfly/proprietary/vendor/lib64/libxmi_high_dynamic_range_cdsp.so" ]; then
     echo "vendor/xiaomi/mayfly/proprietary/vendor/lib64/libxmi_high_dynamic_range_cdsp.so: done"
 else
     wget -O vendor/xiaomi/mayfly/proprietary/vendor/lib64/libxmi_high_dynamic_range_cdsp.so https://sourceforge.net/projects/android-unofficial/files/Android-14/mayfly/vendor/libxmi_high_dynamic_range_cdsp.so
