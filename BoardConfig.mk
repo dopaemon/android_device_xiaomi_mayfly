@@ -6,11 +6,11 @@
 
 DEVICE_PATH := device/xiaomi/mayfly
 
-# Miui Camera for cupid
-include device/xiaomi/miuicamera-cupid/BoardConfig.mk
-
 # Inherit from sm8450-common
 include device/xiaomi/sm8450-common/BoardConfigCommon.mk
+
+# Miui Camera for cupid
+include device/xiaomi/miuicamera-cupid/BoardConfig.mk
 
 # Audio
 AUDIO_FEATURE_ENABLED_ULTRASOUND_PROXIMITY := true
