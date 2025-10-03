@@ -9,16 +9,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from mayfly device
 $(call inherit-product, device/xiaomi/mayfly/device.mk)
+
+# InfinityX
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := "KernelPanix"
+TARGET_HAS_UDFPS := true
+WITH_GAPPS := true
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mayfly
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 2206123SC
-PRODUCT_NAME := lineage_mayfly
+PRODUCT_NAME := infinity_mayfly
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="mayfly-user 15 AQ3A.241006.001 OS2.0.204.0.VLTCNXM release-keys" \
