@@ -14,6 +14,12 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from mayfly device
 $(call inherit-product, device/xiaomi/mayfly/device.mk)
 
+# LunarisAOSP
+TARGET_OPTIMIZED_DEXOPT := true
+WITH_BCR := true
+WITH_GMS := true
+TARGET_USES_CORE_GAPPS := true
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mayfly
 PRODUCT_MANUFACTURER := Xiaomi
