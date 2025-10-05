@@ -1,2 +1,5 @@
 # Xiaomi
 ro.product.mod_device=mayfly
+
+# LunarisAOSP
+ro.paranoid.maintainer=KernelPanix
