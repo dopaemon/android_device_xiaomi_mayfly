@@ -15,6 +15,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/mayfly/device.mk)
 
 # LunarisAOSP
+TARGET_DISABLE_EPPE := true
 TARGET_OPTIMIZED_DEXOPT := true
 WITH_BCR := true
 WITH_GMS := true
