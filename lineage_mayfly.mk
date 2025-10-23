@@ -14,6 +14,22 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from mayfly device
 $(call inherit-product, device/xiaomi/mayfly/device.mk)
 
+# AxionOS
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+AXION_CAMERA_REAR_INFO := 50,13,5
+AXION_CAMERA_FRONT_INFO := 32
+AXION_MAINTAINER := KernelPanix
+AXION_PROCESSOR := Snapdragon_8_Plus_Gen_1
+BYPASS_CHARGE_SUPPORTED ?= false
+HBM_SUPPORTED := false
+TARGET_INCLUDE_VIPERFX := true
+TORCH_STR_SUPPORTED := true
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.perf.scroll_opt = true \
+    persist.sys.perf.scroll_opt.heavy_app = 2
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mayfly
 PRODUCT_MANUFACTURER := Xiaomi
