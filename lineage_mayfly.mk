@@ -15,6 +15,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/mayfly/device.mk)
 
 # RisingOS
+TARGET_DISABLE_EPPE := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
 TARGET_CORE_GMS := true
