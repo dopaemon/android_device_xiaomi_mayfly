@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/mayfly
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2025-08-01
+
 # Inherit from sm8450-common
 include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 
