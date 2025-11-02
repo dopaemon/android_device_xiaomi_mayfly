@@ -25,7 +25,7 @@ $(call soong_config_set,xiaomi_sm8450_sensor_notifier,extension_lib,//device/xia
 # RisingOS
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 8 Plus Gen 1" \
-    RisingMaintainer="Dopaemon"
+    RisingMaintainer="KernelPanix"
 
 # Overlay
 PRODUCT_PACKAGES += \
