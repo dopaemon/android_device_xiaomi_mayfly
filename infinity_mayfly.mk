@@ -27,8 +27,8 @@ PRODUCT_MODEL := 2206123SC
 PRODUCT_NAME := infinity_mayfly
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="mayfly-user 15 AQ3A.241006.001 OS2.0.206.0.VLTCNXM release-keys" \
-    BuildFingerprint=Xiaomi/mayfly/mayfly:15/AQ3A.241006.001/OS2.0.206.0.VLTCNXM:user/release-keys \
+    BuildDesc="mayfly-user 15 AQ3A.241006.001 OS2.0.209.0.VLTCNXM release-keys" \
+    BuildFingerprint=Xiaomi/mayfly/mayfly:15/AQ3A.241006.001/OS2.0.209.0.VLTCNXM:user/release-keys \
     DeviceProduct=mayfly \
     SystemName=mayfly
 
