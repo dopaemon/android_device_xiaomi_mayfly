@@ -47,5 +47,8 @@ $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
+# Camera
+$(call inherit-product, device/xiaomi/miuicamera-cupid/device.mk)
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/mayfly/mayfly-vendor.mk)

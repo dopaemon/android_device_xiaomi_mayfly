@@ -12,6 +12,9 @@ VENDOR_SECURITY_PATCH := 2026-02-01
 # Inherit from sm8450-common
 include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 
+# Inherit from MiuiCamera
+include device/xiaomi/miuicamera-cupid/BoardConfig.mk
+
 # Audio
 AUDIO_FEATURE_ENABLED_ULTRASOUND_PROXIMITY := true
 
