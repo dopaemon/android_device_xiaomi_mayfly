@@ -28,8 +28,7 @@ PRODUCT_PACKAGES += \
     NfcResMayfly \
     SettingsProviderResMayfly \
     SystemUIResMayfly \
-    WifiResMayfly \
-    NTSettingsResTarget
+    WifiResMayfly
 
 # PowerShare
 PRODUCT_PACKAGES += \
