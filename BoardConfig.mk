@@ -12,6 +12,20 @@ VENDOR_SECURITY_PATCH := 2026-02-01
 # Inherit from sm8450-common
 include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 
+ifneq ($(filter aospa_mayfly,$(TARGET_PRODUCT)),)
+MAYFLY_KERNEL := $(DEVICE_PATH)-kernel
+TARGET_PREBUILT_KERNEL := $(MAYFLY_KERNEL)/Image
+TARGET_BOARD_KERNEL_HEADERS := $(MAYFLY_KERNEL)/kernel-headers
+BOARD_PREBUILT_DTBIMAGE_DIR := $(MAYFLY_KERNEL)/dtbs
+BOARD_PREBUILT_DTBOIMAGE := $(MAYFLY_KERNEL)/dtbs/dtbo.img
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(MAYFLY_KERNEL)/vendor_ramdisk/*.ko)
+BOARD_RECOVERY_KERNEL_MODULES := $(wildcard $(MAYFLY_KERNEL)/recovery/*.ko)
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(MAYFLY_KERNEL)/vendor_dlkm/*.ko)
+BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(MAYFLY_KERNEL)/system_dlkm/*.ko)
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(MAYFLY_KERNEL)/system_dlkm/modules.load 2>/dev/null))
+endif
+
 # Audio
 AUDIO_FEATURE_ENABLED_ULTRASOUND_PROXIMITY := true
 

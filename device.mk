@@ -6,7 +6,25 @@
 
 # Inherit from sm8450-common
 TARGET_HAS_UDFPS := true
+TARGET_BOARD_PLATFORM := taro
+TARGET_KERNEL_VERSION := 6.6
+ifeq ($(TARGET_PRODUCT),aospa_mayfly)
+# BoardConfig supplies the prebuilt kernel and per-partition module lists.
+TARGET_USES_KERNEL_PLATFORM := false
+PRODUCT_COPY_FILES += device/xiaomi/mayfly-kernel/Image:kernel
+endif
+KERNEL_PREBUILT_DIR := device/xiaomi/mayfly-kernel
 $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
+
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/vendor/telephony \
+    hardware/qcom-caf/common/qtitelephony-compat \
+    hardware/qcom-caf/sm8450-6.6 \
+    hardware/qcom-caf/wlan/qcwcn \
+    vendor/qcom/opensource/commonsys-intf/display
+
+# CneApp JNI library
+PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor:64
 
 # Audio
 PRODUCT_PACKAGES += \
