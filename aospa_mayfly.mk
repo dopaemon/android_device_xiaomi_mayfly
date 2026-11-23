@@ -30,6 +30,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Use the UFS BSG UAPI exposed by the Mayfly 6.6 kernel.
 $(call soong_config_set,ufsbsg,ufsframework,bsg)
+# Export the CAF SDM and DRM headers for the normal display build.
+$(call soong_config_set_bool,qtidisplay,default,true)
 
 # Limit Soong to the sources used by the Mayfly product.
 PRODUCT_SOURCE_ROOT_DIRS += \
