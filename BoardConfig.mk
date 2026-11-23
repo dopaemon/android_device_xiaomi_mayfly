@@ -13,6 +13,9 @@ VENDOR_SECURITY_PATCH := 2026-02-01
 include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 
 ifneq ($(filter aospa_mayfly,$(TARGET_PRODUCT)),)
+BOARD_SEPOLICY_M4DEFS += aospa_mayfly_qcom_ese_policy=true
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 MAYFLY_KERNEL := $(DEVICE_PATH)-kernel
 TARGET_PREBUILT_KERNEL := $(MAYFLY_KERNEL)/Image
 TARGET_BOARD_KERNEL_HEADERS := $(MAYFLY_KERNEL)/kernel-headers
