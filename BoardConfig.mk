@@ -15,6 +15,7 @@ include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 ifneq ($(filter aospa_mayfly,$(TARGET_PRODUCT)),)
 BOARD_SEPOLICY_M4DEFS += aospa_mayfly_qcom_ese_policy=true
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml
 
 MAYFLY_KERNEL := $(DEVICE_PATH)-kernel
 TARGET_PREBUILT_KERNEL := $(MAYFLY_KERNEL)/Image
