@@ -28,6 +28,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# Use the UFS BSG UAPI exposed by the Mayfly 6.6 kernel.
+$(call soong_config_set,ufsbsg,ufsframework,bsg)
+
 # Limit Soong to the sources used by the Mayfly product.
 PRODUCT_SOURCE_ROOT_DIRS += \
     -kernel/platform \
